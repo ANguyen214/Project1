@@ -12,12 +12,5 @@
 
 using namespace std;
 
-class pokemon {
 
-	std::string pokeName, firstType, secondType;
-
-	int pokeNum;
-
-
-};
 
