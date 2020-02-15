@@ -1,5 +1,10 @@
-#include<iostream>
+/*
+	Nguyen, Alexander
 
-std::string pokeName, firstType, secondType;
+	February 14, 2020
 
-int pokeNum;
+	CS A250
+	A2 - Pokemon Class
+*/
+
+
