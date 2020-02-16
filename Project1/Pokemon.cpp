@@ -14,7 +14,7 @@ using namespace std;
 
 //Default Constructor with Initialization List
 Pokemon::Pokemon() : pokeName{ "None" }, pokeNum{ 0 },
-	firstType{ "None" }, secondType{ "None" }{
+	firstType{ "None" }, secondType{"None"}{
 }
 
 //Overloaded Constructors with Initialization List
@@ -49,6 +49,26 @@ void Pokemon::setFirstType(string newFirstType)
 void Pokemon::setSecondType(string newSecondType)
 {
 	secondType = newSecondType;
+}
+
+bool Pokemon::commonType(Pokemon pokeObj)const
+{
+		if ((firstType == pokeObj.firstType) || (firstType == pokeObj.secondType))
+		{
+			return true;
+		}
+		else if (secondType == pokeObj.firstType||secondType == pokeObj.secondType)
+		{
+			if (secondType == "" && pokeObj.secondType == "")
+			{
+				return false;
+			}
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
 }
 
 //Print Function Implementation
