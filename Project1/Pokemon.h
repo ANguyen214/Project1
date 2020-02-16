@@ -6,38 +6,41 @@
 	CS A250
 	A2 - Pokemon Class
 */
+#ifndef POKEMON_H
+#define POKEMON_H
+
+#include <string>
 
 class Pokemon {
-	private:
-		//Variable creation
-		std::string pokeName, firstType, secondType;
-		int pokeNum;
-
+	
 	public:
 		//Default Constructor
-		Pokemon()
-		{
-			pokeName = "None";
-			firstType = "None";
-			secondType = "None";
-			pokeNum = 0;
-		};
+		Pokemon();
 
 		//Overloaded Constructors
-		Pokemon(std::string pokeName, int pokeNum,
-			std::string firstType)
-		{
+		Pokemon(const std::string& pokeName, int pokeNum1, const std:: string& firstType);
 
-		}
+		Pokemon(const std::string& pokeName, int pokeNum1, const std::string& firstType, const std::string& secondType);
+		
+		//Getters and Setters for pokemon types
+		std::string getFirstType() const;
+		std::string getSecondType() const;
 
-		Pokemon(std::string pokeName, int pokeNum,
-			std::string firstType, std::string secondType)
-		{
-
-		}
-
-
+		void setFirstType(std::string newFirstType);
+		void setSecondType(std::string newSecondType);
+		
+		//Print Function
+		void print() const;
 
 		//Destructor
 		~Pokemon();
+
+	private:
+		//Variable Creation
+		std::string pokeName;
+		int pokeNum;
+		std::string firstType;
+		std::string secondType;
 };
+
+#endif
